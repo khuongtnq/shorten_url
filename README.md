@@ -39,6 +39,6 @@ Shorten url demo
   rails console
   ```
     * Looking for api docs? Go to /swagger
-### `api/v1/encode`
+### `api/v1/shorten_urls/encode`
     
-### `api/v1/decode`
+### `api/v1/shorten_urls/decode`
