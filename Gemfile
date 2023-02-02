@@ -70,3 +70,14 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+# Restful API Builder
+# https://github.com/ruby-grape/grape
+gem 'grape', '~> 1.7.0'
+gem 'grape-entity', '~> 0.8.2'
+gem 'grape-swagger', '~> 1.3', '>= 1.3.1'
+gem 'grape-swagger-rails', '~> 0.3.1'
+gem 'grape-swagger-entity', '~> 0.5.1'
+gem 'grape_logging', '~> 1.8', '>= 1.8.4'
+gem 'annotate', '~> 3.0', '>= 3.0.3'
+gem 'devise'
+gem 'activerecord-import'

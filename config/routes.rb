@@ -3,4 +3,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  mount GrapeSwaggerRails::Engine => '/swagger' unless Rails.env.production?
+  mount Root, at: '/'
 end
