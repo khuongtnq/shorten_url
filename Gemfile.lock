@@ -100,6 +100,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    dockerfile-rails (1.0.4)
+      rails
     dry-core (1.0.0)
       concurrent-ruby (~> 1.0)
       zeitwerk (~> 2.6)
@@ -306,6 +308,7 @@ DEPENDENCIES
   capybara
   debug
   devise
+  dockerfile-rails (>= 1.0.0)
   factory_bot_rails
   faker
   grape (~> 1.7.0)

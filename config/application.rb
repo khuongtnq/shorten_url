@@ -6,10 +6,19 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module ShortenUrl
+module Server
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    # Api auto reload
+    api_files = Dir[Rails.root.join('app', 'api', '**', '*.rb')]
+    api_reloader =
+      ActiveSupport::FileUpdateChecker.new(api_files) do
+        Rails.application.reload_routes!
+      end
+    ActiveSupport::Reloader.to_prepare do
+      api_reloader.execute_if_updated
+    end
 
     # Configuration for the application, engines, and railties goes here.
     #
