@@ -84,3 +84,5 @@ gem 'grape_logging', '~> 1.8', '>= 1.8.4'
 gem 'annotate', '~> 3.0', '>= 3.0.3'
 gem 'devise'
 gem 'activerecord-import'
+
+gem "dockerfile-rails", ">= 1.0.0", :group => :development
