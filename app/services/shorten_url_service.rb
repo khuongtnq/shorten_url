@@ -3,6 +3,7 @@ class ShortenUrlService
     SHORTEN_URL_PREFIX = ENV['SHORTEN_URL_PREFIX'] || 'http://short.est'
 
     def decode_shorten_link(short_url)
+      # get only value token short url to query
       token = short_url.split("/").last
       Link.find_by(short_url: token)&.long_url
     end

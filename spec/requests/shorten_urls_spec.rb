@@ -35,6 +35,14 @@ RSpec.describe "/api/v1/shorten_urls/", type: :request do
       end
     end
 
+    context 'with valid parameters and create link' do
+      it 'creates a new link' do
+        expect do
+          post '/api/v1/shorten_urls/encode', params: encode_attributes
+        end.to change(Link, :count).by(1)
+      end
+    end
+
     context 'with valid attributes' do
       it 'generate encode url' do
         post '/api/v1/shorten_urls/encode', params: encode_invalid_url
